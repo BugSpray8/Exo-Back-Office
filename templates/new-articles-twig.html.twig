@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Rédaction</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+   <form method="POST">
+      <div class="form-group row">
+            <label for="name" class="col-4 col-form-label">name</label> 
+            <div class="col-8">
+            <input id="name" name="name" placeholder="nom de l'article" type="text" class="form-control {% if errors.form is defined %}is-invalid{% endif %}" value="{{ formData.login }}">
+            {% if errors.form is defined %}
+            <div class="invalid-feedback">
+                {{ messages.form }}
+            </div>
+      <div class="form-group row">
+            <label for="description" class="col-4 col-form-label">description</label> 
+            <div class="col-8">
+            <textarea id="description" name="description" placeholder="description" type="text" class="form-control {% if errors.form is defined %}is-invalid{% endif %}" value="{{ formData.login }}">
+            {% if errors.form is defined %}
+            <div class="invalid-feedback">
+                {{ messages.form }}
+            </div>
+      <div class="form-group row">
+            <label for="price" class="col-4 col-form-label">price</label> 
+            <div class="col-8">
+            <input id="price" name="price" placeholder="prix en €" type="text" class="form-control {% if errors.form is defined %}is-invalid{% endif %}" value="{{ formData.login }}">
+            {% if errors.form is defined %}
+            <div class="invalid-feedback">
+                {{ messages.form }}
+            </div>
+      <div class="form-group row">
+            <label for="quantity" class="col-4 col-form-label">quantity</label> 
+            <div class="col-8">
+            <input id="quantity" name="price" placeholder="quantité" type="text" class="form-control {% if errors.form is defined %}is-invalid{% endif %}" value="{{ formData.login }}">
+            {% if errors.form is defined %}
+            <div class="invalid-feedback">
+                {{ messages.form }}
+            </div>
+      <input type="submit" value="Mettre en ligne" />
+   </form>
+</body>
+</html>
